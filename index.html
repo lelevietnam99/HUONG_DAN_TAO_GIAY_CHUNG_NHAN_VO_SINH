@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hướng Dẫn Sử Dụng Hệ Thống Cấp Chứng Nhận</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #e74c3c;
+            --bg-color: #f8f9fa;
+            --text-color: #333;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--secondary-color);
+        }
+        header h1 { margin: 0; font-size: 2.2rem; }
+        header p { margin-top: 10px; font-size: 1.1rem; opacity: 0.9; }
+        /* Nút tải file mẫu */
+        .download-btn {
+            display: inline-block;
+            background-color: #2980b9;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+        .download-btn:hover {
+            background-color: #1c5982;
+        }
+        .download-btn span {
+            margin-right: 8px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .step-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid var(--primary-color);
+        }
+        /* Nút mở trang công cụ */
+        .action-btn {
+            display: inline-block;
+            background-color: #27ae60;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-top: 15px;
+            margin-bottom: 25px;
+            transition: transform 0.2s, background-color 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .action-btn:hover {
+            background-color: #219150;
+            transform: translateY(-2px); /* Hiệu ứng nảy lên nhẹ khi di chuột */
+        }
+        .step-card h2 {
+            color: var(--primary-color);
+            margin-top: 0;
+            border-bottom: 2px dashed #eee;
+            padding-bottom: 10px;
+        }
+        .step-card h2 span {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+        
+        /* Style cho phần video */
+        .video-wrapper {
+            width: 100%;
+            margin: 20px 0;
+            text-align: center;
+            background-color: #000;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        video {
+            width: 100%;
+            max-height: 500px;
+            display: block;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: auto;
+            min-height: 300px;
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6c757d;
+            font-weight: bold;
+            border: 2px dashed #ced4da;
+            border-radius: 5px;
+            margin: 20px 0;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td { border: 1px solid #ddd; }
+        th, td { padding: 12px; text-align: left; }
+        th { background-color: #f2f2f2; color: var(--primary-color); }
+        
+        .note {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Hướng Dẫn Cấp Chứng Nhận Tự Động</h1>
+        <p>Tài liệu hướng dẫn các bước thao tác trên hệ thống web để tạo hàng loạt giấy chứng nhận.</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="step-card">
+            <h2><span>▶</span> Video Hướng Dẫn Trực Quan</h2>
+            <p>Mời các bạn xem qua video demo dưới đây để dễ dàng hình dung toàn bộ quá trình chuẩn bị dữ liệu và thao tác cấp chứng nhận hàng loạt:</p>
+            
+            <div class="video-wrapper">
+                <video controls preload="metadata">
+                    <source src="video_1_huongdan.mp4" type="video/mp4">
+                    Trình duyệt của bạn không hỗ trợ thẻ video. Vui lòng cập nhật trình duyệt!
+                </video>
+            </div>
+        
+        </div>
+
+        <div class="step-card">
+            <h2><span>1</span> Chuẩn bị File Excel Dữ Liệu</h2>
+            <p>Để hệ thống có thể đọc và điền đúng thông tin lên phôi, bạn cần chuẩn bị một file Excel (định dạng <code>.xlsx</code> hoặc <code>.xls</code>) với các cột có tên tiêu đề chính xác như bảng dưới đây:</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tên cột (Bắt buộc)</th>
+                        <th>Ý nghĩa / Ghi chú</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Họ tên</strong></td><td>Tên đầy đủ của võ sinh (VD: Nguyễn Văn A)</td></tr>
+                    <tr><td><strong>Năm sinh</strong></td><td>Năm sinh (VD: 1995)</td></tr>
+                    <tr><td><strong>Nơi sinh</strong></td><td>Địa danh nơi sinh</td></tr>
+                    <tr><td><strong>Đơn vị</strong></td><td>Tên câu lạc bộ hoặc đơn vị trực thuộc</td></tr>
+                    <tr><td><strong>Trình độ</strong></td><td>Cấp bậc đạt được</td></tr>
+                    <tr><td><strong>Ngày tổ chức</strong></td><td>Ngày thi hoặc ngày cấp (Định dạng: DD/MM/YYYY)</td></tr>
+                    <tr><td><strong>Cơ quan Tổ chức</strong></td><td>Tên cơ quan cấp chứng nhận</td></tr>
+                    <tr><td><strong>Quyết định</strong></td><td>Số quyết định ban hành</td></tr>
+                    <tr><td><strong>STT</strong></td><td>Số thứ tự / Số vào sổ văn bằng</td></tr>
+                    <tr><td><strong>Tên file ảnh</strong></td><td>Tên file ảnh thẻ của võ sinh tương ứng (VD: <strong>nguyen-van-a.jpg</strong>). Cần ghi chính xác cả đuôi file.</td></tr>
+                </tbody>
+            </table>
+            <div style="text-align: center; margin-top: 20px;">
+                <p>Để tiện lợi nhất, bạn không cần tự tạo file. Hãy tải file Excel mẫu đã được định dạng sẵn các cột tại đây:</p>
+                <a href="filemau.xlsx" download="filemau.xlsx" class="download-btn" style="background-color: #217346;">
+                    <span>📊</span> TẢI FILE EXCEL MẪU (.XLSX)
+                </a>
+            </div>
+        </div>
+
+        <div class="step-card">
+            <h2><span>2</span> Chuẩn bị Phôi & Thư Mục Ảnh Thẻ</h2>
+            <p>Tiếp theo, bạn cần chuẩn bị hình ảnh nền của giấy chứng nhận (Phôi) và một thư mục chứa tất cả ảnh thẻ của võ sinh.</p>
+            <ul>
+                <li><strong>Phôi ảnh trống:</strong> Là file ảnh chất lượng cao (thường là .jpg hoặc .png) chưa điền thông tin, nhưng đã chừa sẵn khoảng trống.</li>
+                <li><strong>Thư mục Ảnh thẻ:</strong> Gom tất cả ảnh thẻ cần dùng vào một thư mục (Folder) duy nhất. <strong>Lưu ý quan trọng:</strong> Tên file ảnh trong thư mục này phải khớp hoàn toàn 100% với tên bạn đã ghi trong cột <strong>Tên file ảnh</strong> của file Excel ở Bước 1.</li>
+            </ul>
+
+            <div style="text-align: center; margin-bottom: 20px;">
+                <p>Nếu bạn chưa có phôi mẫu của môn phái, hãy tải tại đây:</p>
+                <a href="chung_nhan.jpg" download="chung_nhan.jpg" class="download-btn">
+                    <span>⬇️</span> TẢI PHÔI CHỨNG NHẬN MẪU (JPG)
+                </a>
+            </div>
+        </div>
+        <div class="step-card">
+            <h2><span>3</span> Thao Tác Trên Phần Mềm Web</h2>
+            <p>Sau khi đã chuẩn bị xong dữ liệu, hãy truy cập vào trang công cụ cấp chứng nhận và làm theo thứ tự sau:</p>
+            <ol>
+                <li>Click vào nút <strong>Chọn File Excel</strong> và chỉ đường dẫn đến file danh sách.</li>
+                <li>Click vào nút <strong>Chọn Phôi Ảnh Trống</strong> và tải lên ảnh nền chứng nhận.</li>
+                <li>Click vào nút <strong>Chọn thư mục chứa ẢNH THẺ</strong>, trình duyệt sẽ yêu cầu bạn xác nhận việc tải toàn bộ thư mục lên (hãy chọn "Upload/Tải lên").</li>
+                <li>Nhấn nút <strong>BẮT ĐẦU TẠO & TẢI VỀ (ZIP)</strong> màu xanh lá cây.</li>
+            </ol>
+            <div style="text-align: center;">
+                <a href="tao-chung-nhan.html" class="action-btn" target="_blank">
+                    <span>🚀</span> MỞ PHẦN MỀM CẤP CHỨNG NHẬN
+                </a>
+            </div>
+            <div class="note">
+                <strong>⏳ Chờ đợi trong giây lát:</strong> Hệ thống sẽ tự động ghép ảnh, căn chỉnh chữ và nén tất cả vào một file <code>.zip</code> duy nhất. Khi hoàn tất, file sẽ tự động được tải về máy tính của bạn. Bạn chỉ cần giải nén file đó ra là có thể đem đi in ạ!
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
